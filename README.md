@@ -1,10 +1,10 @@
-#RMPhoneFormat
+# RMPhoneFormat
 
 RMPhoneFormat provides a simple to use class for formatting and validating phone numbers in iOS apps. The formatting should replicate what you would see in the Contacts app for the same phone number.
 
 The included sample project demonstrates how to use the formatting class to setup a text field that formats itself as the user types in a phone number. While the sample app is for iOS, the RMPhoneFormat class should work as-is under OS X.
 
-##Setup
+## Setup
 
 This class depends on a copy of an Apple provided private framework file named Default.phoneformat being copied into the app's resource bundle and named PhoneFormats.dat.
 
@@ -16,7 +16,7 @@ where \<version\> is the version of the iPhone SDK installed. It is recommended 
 
 Add RMPhoneFormat.m and RMPhoneFormat.h to your own project. These files use ARC. If your project is not using ARC then you must add the -fobjc-arc flag to the RMPhoneFormat.m file. Select your target in Xcode. Select the Build Phases tab. Open the Compile Sources pane. Select RMPhoneFormat.m and press Enter. Add -fobjc-arc in the popup window so it appears in the Compiler Flags column.
 
-##Usage
+## Usage
 
 In its simplest form you do the following:
 
@@ -54,17 +54,17 @@ RMPhoneFormat can also be used to lookup a country's calling code:
     NSString *callingCode = [fmt callingCodeForCountryCode:@"AU"]; // Australia - returns 61
     NSString *defaultCallingCode = [fmt defaultCallingCode]; // based on current Region Format (locale)
 
-##Notes
+## Notes
 
 See the comments in RMPhoneFormat.m for additional details.
 
 Please note that the format of the Default.phoneformat file is undocumented. There are aspects to this file that are not yet understood. This means that some phone numbers in some countries may not be formatted correctly.
 
-##Issues
+## Issues
 
 If you encounter an issue where a phone number is formatted differently with RMPhoneFormat than the Contacts app, please let me know. Be sure to provide the phone number, the output from RMPhoneFormat, the output shown in Contacts, and the Region Format setting from the Settings app.
 
-##License
+## License
     Copyright (c) 2012, Rick Maddy
     All rights reserved.
 
